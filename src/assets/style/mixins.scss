@@ -1,0 +1,57 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("~@/assets/fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin mt($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-top: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin mb($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin ml($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin mr($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin pt($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  padding-top: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin pb($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  padding-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin pl($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  padding-left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin pr($pcSize, $mobSize) {
+  $addSize: $pcSize + $mobSize;
+  $maxWidth: $maxWidth - 320;
+  padding-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

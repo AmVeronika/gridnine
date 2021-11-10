@@ -1,0 +1,79 @@
+.castom__scroll {
+   overflow-y: auto;
+   scrollbar-color: orange;
+   scrollbar-width: thin;
+}
+
+.castom__scroll::-webkit-scrollbar {
+   /* 1 - скроллбар */
+   position: absolute;
+   top: 0;
+   left: 0;
+   box-sizing: border-box;
+   border-radius: 10px;
+   background: orange;
+   width: 10px;
+}
+
+.castom__scroll::-webkit-scrollbar-button {
+   /* 2 - кнопка */
+}
+
+.castom__scroll::-webkit-scrollbar-track {
+   /* 3 - трек */
+   border-radius: 10px;
+   border: 0.6px solid gray;
+}
+
+.castom__scroll::-webkit-scrollbar-track-piece {
+   /* 4 - видимая часть трека */
+}
+
+.castom__scroll::-webkit-scrollbar-thumb {
+   /* 5 - ползунок */
+   background: orange;
+   border-radius: 10px;
+   height: 20px;
+   width: 10px;
+}
+
+
+.castom__scroll--main {
+   overflow-y: scroll;
+   height: 100vh;
+   scrollbar-color:orange;
+   scrollbar-width: thin;
+}
+
+.castom__scroll--main::-webkit-scrollbar {
+   /* 1 - скроллбар */
+   position: absolute;
+   top: 0;
+   left: 0;
+   box-sizing: border-box;
+   border-radius: 10px;
+   background: orange;
+   width: 10px;
+}
+
+.castom__scroll--main::-webkit-scrollbar-button {
+   /* 2 - кнопка */
+}
+
+.castom__scroll--main::-webkit-scrollbar-track {
+   /* 3 - трек */
+   border-radius: 10px;
+   border: 0.6px solid gray;
+}
+
+.castom__scroll--main::-webkit-scrollbar-track-piece {
+   /* 4 - видимая часть трека */
+}
+
+.castom__scroll--main::-webkit-scrollbar-thumb {
+   /* 5 - ползунок */
+   background: orange;
+   border-radius: 10px;
+   height: 20px;
+   width: 10px;
+}

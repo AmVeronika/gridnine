@@ -1,0 +1,105 @@
+//COLORS
+$col-blue: #0087c9; // синий
+$col-orange: #ffb168; // оранжевый
+$btn-gray: #f1f1f1; // кнопка серая
+$form-bg: #d9d9d9; // обводка формы сортировки
+
+$white: #FFFFFF;
+$black: #000000;
+
+
+//Fonts
+
+$ff-regular: Poppins-Regular, sans-serif;//400
+$ff-medium: Poppins-Medium, sans-serif;//500
+$ff-semibold: Poppins-SemiBold, sans-serif;//600
+
+.fs-54{
+  @include adaptiv-font(54, 30);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+.fs-44{
+  @include adaptiv-font(44, 22);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+.fs-36{
+  @include adaptiv-font(36, 22);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+.fs-28{
+  @include adaptiv-font(28, 18);
+  font-family: $ff-medium;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+}
+.fs-28s{
+  @include adaptiv-font(28, 18);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+.fs-18{
+  @include adaptiv-font(18, 16);
+  font-family: $ff-regular;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+}
+.fs-18s{
+  @include adaptiv-font(18, 13);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.fs-18m{
+  @include adaptiv-font(18, 13);
+  font-family: $ff-medium;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.fs-16{
+  @include adaptiv-font(16, 13);
+  font-family: $ff-medium;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+}
+
+.fs-16r{
+  @include adaptiv-font(16, 13);
+  font-family: $ff-regular;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+}
+.fs-14{
+  @include adaptiv-font(14, 10);
+  font-family: $ff-regular;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+}
+.fs-14s{
+  @include adaptiv-font(14, 10);
+  font-family: $ff-semibold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+.fs-12{
+  @include adaptiv-font(12, 10);
+  font-family: $ff-regular;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
