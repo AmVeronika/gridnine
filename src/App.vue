@@ -13,7 +13,7 @@ export default {
   components: {
     FilterComponents,
     FlightList,
-  }
+  },
 };
 </script>
 
@@ -22,6 +22,5 @@ export default {
   display: grid;
   grid-template-columns: 310px 1fr;
   min-height: 100vh;
-
 }
 </style>
