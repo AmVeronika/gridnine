@@ -57,8 +57,16 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: "FilterComponents"
+  name: "FilterComponents",
+  methods: {
+    ...mapActions(["fetchDataAirlinesList"]),
+  },
+  mounted() {
+    this.fetchDataAirlinesList();
+  }
 };
 </script>
 

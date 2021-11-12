@@ -1,6 +1,6 @@
 <template>
   <div class="flight-list">
-    <section class="flight-tickets">
+    <section class="flight-tickets" v-for="index in 2" :key="index">
       <header class="flight-tickets__header">
         <img class="flight-tickets__header-logo" src="../assets/img/logo_lot.png" alt="логотип авиакомпании" />
         <div class="flight-tickets__header-wrap">
@@ -8,7 +8,7 @@
           <p class="flight-tickets__header-info">Стоимость для одного взрослого пассажира</p>
         </div>
       </header>
-      <article class="flight-ticket">
+      <article class="flight-ticket" v-for="index in 2" :key="index">
         <div class="flight-ticket__rout">
           <p class="flight-ticket__rout-start fs-28">Москва, ШЕРЕМЕТЬЕВО <span>(SVO)</span></p>
           <img src="https://img.icons8.com/ios/40/0087c9/long-arrow-right.png" />
@@ -23,7 +23,8 @@
           <p class="flight-ticket__date-time fs-18">09:25 <span>19 авг. ср</span></p>
           <div class="flight-ticket__date-transfer fs-14">1 пересадка</div>
         </div>
-        <p class="flight-ticket__company fs-12">Рейс выполняет: <span>LOT Polish AirLines</span> </p>
+        <div class="flight-ticket__company fs-12">Рейс выполняет:<span>LOT Polish AirLines</span>
+          <p class="flight-ticket__company-border"></p></div>
       </article>
       <button class="flight-tickets-btn">ВЫБРАТЬ</button>
     </section>
@@ -57,9 +58,10 @@ export default {
       text-align: end;
     }
   }
+
   &-btn {
     width: 100%;
-    margin: -10px auto 0;
+    margin: 0 auto 25px;
     padding: 10px;
     background: $col-orange;
     color: $white;
@@ -72,10 +74,7 @@ export default {
   align-items: center;
   padding: 20px;
   gap: 15px;
-  &__company {
-    width: 100%;
-    margin-left: 0;
-  }
+
   &__rout {
     border-bottom: 1px solid $form-bg;
   }
@@ -91,6 +90,7 @@ export default {
       color: $col-blue;
     }
   }
+
   &__date {
     position: relative;
     padding-bottom: 15px;
@@ -114,10 +114,23 @@ export default {
       width: max-content;
       padding: 0 7px;
       color: $col-orange;
-
     }
   }
-
+  &__company {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    &-border {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 2px;
+      background: $col-blue;
+    }
+  }
   &__travel-time {
     display: flex;
     align-items: center;
